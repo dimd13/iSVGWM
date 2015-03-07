@@ -1,0 +1,23 @@
+{
+  "name": "Interactive SVG World Map",
+  "version": "0.0.1",
+  "authors": [
+    "dimd13 <dimd.wolf13@gmail.com>"
+  ],
+  "description": "SVG World Map with countries descriptions",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.14",
+    "jquery": "~2.1.3"
+  }
+}
