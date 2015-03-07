@@ -2,7 +2,9 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Interactive SVG World Map</title>
     <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
 
@@ -14,7 +16,7 @@
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <div ng-controller="svgMap">
                 <div svg-map></div>
-                <div class="full-width-modal curved-vt-2 closed">
+                <div class="full-width-modal closed">
                     <div class="fixed-panel">
                         <div class="headline-flag"><img ng-src="{{country.flag}}" alt=""/></div>
                         <div class="headline">{{country.name}}</div>
