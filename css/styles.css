@@ -19,7 +19,7 @@ svg .country_shape:hover , .country_shape:active {
 }
 
 svg {
-    /*background: powderblue;*/
+    background: powderblue;
     width: 100%;
     height: 100%;
 }
