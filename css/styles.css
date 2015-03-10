@@ -90,7 +90,14 @@ body.open-modal {
     width: 48px;
     height: 48px;
 }
-
+ul.nav.nav-pills.nav-stacked li a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+ul.nav.nav-pills.nav-stacked li a {
+    font-size: 18px;
+}
 .popover-title img {
     margin-top: -5px;
     width: 32px;
@@ -113,7 +120,6 @@ body.open-modal {
 }
 
 .presentation {
-
     padding-top: 15px;
     overflow-y: auto;
     height: 100%;
@@ -137,29 +143,12 @@ body.open-modal {
     border: 1px solid #eee;
 }
 
-/*.curved-vt-2 {*/
-
-    /*background:#fff;*/
-    /*-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;*/
-    /*-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;*/
-    /*box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;*/
-/*}*/
-
-/*.curved-vt-2:before,*/
-/*.curved-vt-2:after {*/
-    /*content:"";*/
-    /*position:absolute;*/
-    /*z-index:-2;*/
-/*}*/
-
-/*.curved-vt-2:before {*/
-    /*top:10px;*/
-    /*bottom:10px;*/
-    /*left:10px;*/
-    /*right:10px;*/
-    /*-webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);*/
-    /*-moz-box-shadow:0 0 15px rgba(0,0,0,0.6);*/
-    /*box-shadow:0 0 15px rgba(0,0,0,0.6);*/
-    /*-moz-border-radius:0px / 100px;*/
-    /*border-radius:0px / 100px;*/
-/*}*/
+.highlight-path {
+    stroke-width: .5!important;
+    stroke: #000!important;
+    background-color: rgba(255,255,255, 1) !important;
+    fill: rgba(255, 255, 255, 0.80) !important;
+    -webkit-transition: stroke 0.5s, stroke-width 0.5s!important;
+    -o-transition: stroke 0.5s, stroke-width 0.5s!important;
+    transition: stroke 0.5s, stroke-width 0.5s!important;
+}
