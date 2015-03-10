@@ -3,8 +3,13 @@ app.controller('svgMap', function($scope, $rootScope, $http) {
   $scope.countries = {};
   $http.get('data/countries.json').success(function(data) {
     $scope.countries = data;
-    angular.element('svg').find('path').each(function(i, el){
+
+  }).then(function() {
+    /*TODO: some times not work...WHY?*/
+    jQuery('svg').find('path').each(function(i, el){
+    console.log('asd')
       var id = el.id;
+      console.log(id)
       if ($scope.countries.hasOwnProperty(id)) {
         //d3.selectAll('#'+ id).attr('data-content', '<h3><img src="'+$scope.countries[id]['flag']+'" alt=""/>'+$scope.countries[id]['name']+'</h3>');
         d3.selectAll('#'+ id).attr('data-content', $scope.countries[id]['text']);
@@ -30,15 +35,13 @@ app.controller('svgMap', function($scope, $rootScope, $http) {
         angular.element('body').removeClass('open-modal');
       });
     };
-
-    $('svg .country_shape').popover({
+    angular.element('svg path.country_shape').popover({
       'trigger':'hover'
-      ,'container': 'body'
+      ,'container': '#map'//body
       ,'placement': 'auto'
-      ,'white-space': 'nowrap'
+      ,'white-space': 'wrap'
       ,'html':'true'
     });
-
   });
 
 });
@@ -48,8 +51,10 @@ app.directive('svgMap', function() {
     templateUrl: 'img/map.svg',
     link: function(scope, element, attrs) {
       element.find('path').bind('click', function() {
-        scope.showCountryInfo(this.id);
-        scope.$digest();
+        if (scope.countries.hasOwnProperty(this.id)) {
+          scope.showCountryInfo(this.id);
+          scope.$digest();
+        }
       });
     }
   }
