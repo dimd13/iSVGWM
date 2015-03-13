@@ -19,6 +19,7 @@ app.controller('svgMapData', function($scope, $rootScope, $http) {
           ,'placement': 'auto'
           ,'white-space': 'wrap'
           ,'html':'true'
+          ,'delay': { "show": 500, "hide": 100 }
         })
       }
     });
